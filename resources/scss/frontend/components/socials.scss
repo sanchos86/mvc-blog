@@ -1,0 +1,24 @@
+.socials {
+  display: inline-flex;
+
+  &__item {
+    margin: 0 0 0 map-get($gaps, 2);
+  }
+
+  &__link {
+    display: inline-flex;
+
+    &--github {
+      color: #24292e;
+    }
+
+    &--linkedin {
+      color: #2977c9;
+    }
+
+    &--telegram {
+      color: #0088cc;
+    }
+
+  }
+}

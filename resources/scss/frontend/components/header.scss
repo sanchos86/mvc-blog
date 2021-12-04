@@ -1,0 +1,29 @@
+.header {
+  &__bottom {
+    background-color: $color-accent;
+  }
+
+  &__title,
+  &__socials {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__socials {
+    justify-content: flex-end;
+  }
+
+  &__logo {
+    display: block;
+    font-weight: 900;
+    color: $color-accent;
+  }
+
+  &__search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,37 @@
+.post {
+  &__category-link {
+    margin-right: map-get($gaps, 2);
+    font-size: $font-sm;
+    font-weight: 700;
+    color: $color-secondary;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: map-get($gaps, 1);
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: normal;
+    color: $color-accent;
+  }
+
+  &__meta {
+    margin-bottom: map-get($gaps, 4);
+    color: $color-grey;
+    font-size: $font-sm;
+  }
+
+  &__thumb {
+    margin-bottom: map_get($gaps, 4);
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__content {
+    margin-bottom: map-get($gaps, 6);
+    font-size: $font-lg;
+  }
+}

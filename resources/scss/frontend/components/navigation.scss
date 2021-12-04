@@ -1,0 +1,84 @@
+.nav {
+  $nav: &;
+  &__list {
+    display: none;
+    &--subnav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: map_get($z-indices, 5);
+      flex-direction: column;
+      display: none;
+      min-width: 100%;
+    }
+  }
+  &__item {
+    position: relative;
+    &:hover {
+      .nav__list--subnav {
+        display: flex;
+      }
+      > #{$nav}__link {
+        background-color: $color-secondary;
+      }
+    }
+    &--active {
+      > #{$nav}__link {
+        color: $color-white;
+        background-color: $color-secondary;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: map-get($gaps, 3) map-get($gaps, 4);
+    background-color: $color-accent;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-md;
+    cursor: pointer;
+    transition: 0.1s background-color ease;
+    &:hover {
+
+    }
+  }
+  &__link-icon {
+    margin-left: map-get($gaps, 2);
+  }
+
+  &__mobile-menu-switch {
+    display: flex;
+    align-items: center;
+    padding: map-get($gaps, 3) map-get($gaps, 4);
+    background-color: $color-secondary;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-md;
+    cursor: pointer;
+    transition: 0.1s background-color ease;
+    border: 0;
+    outline: 0;
+  }
+
+  @media (min-width: map_get($grid-breakpoints, 'sm')) {
+    .nav {
+      &__list:not(.nav__list--subnav) {
+        display: flex;
+      }
+
+      &__mobile-menu-switch {
+        display: none;
+      }
+    }
+  }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .25s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}

@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__link {
+    display: inline-flex;
+    padding: 0.5rem 0.75rem;
+    margin: 0.125rem;
+    color: $color-white;
+    background-color: $color-accent;
+    border-radius: $border-radius;
+
+    &--active {
+      background-color: $color-secondary;
+    }
+
+    &--disabled {
+      background-color: lighten($color-accent, 25%);
+      cursor: not-allowed;
+    }
+  }
+}
