@@ -1,0 +1,53 @@
+.mobile-nav {
+  $mobileNav: &;
+  display: none;
+  padding: map_get($gaps, 6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: map_get($z-indices, 6);
+  background-color: var(--bs-white);
+
+  &--opened {
+    display: block;
+  }
+
+  &__top {
+    margin-bottom: map_get($gaps, 2);
+  }
+
+  &__close-btn {
+    padding: 0;
+    color: $color-accent;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    font-size: $font-lg * 1.25;
+  }
+
+  &__list {
+    &--subnav {
+      #{$mobileNav}__link {
+        padding-left: map_get($gaps, 4);
+      }
+    }
+  }
+
+  &__link {
+    padding: map_get($gaps, 1) 0;
+    display: flex;
+    align-items: center;
+    color: $color-accent;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $font-md;
+  }
+
+  &__link-icon {
+    margin-left: map-get($gaps, 2);
+  }
+}

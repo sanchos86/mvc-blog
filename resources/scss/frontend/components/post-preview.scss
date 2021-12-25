@@ -21,7 +21,7 @@
   &__date {
     margin-bottom: map_get($gaps, 1);
     font-size: $font-md;
-    color: $color-grey;
+    color: var(--bs-gray-600);
   }
 
   &--default {

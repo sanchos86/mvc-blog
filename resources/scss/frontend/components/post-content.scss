@@ -54,7 +54,7 @@
   }
 
   blockquote {
-    border-left: 4px solid $color-grey;
+    border-left: 4px solid var(--bs-gray-600);
     margin-bottom: 4px;
     margin-top: 4px;
     padding-left: 16px

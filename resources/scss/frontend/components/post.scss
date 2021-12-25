@@ -3,7 +3,7 @@
     margin-right: map-get($gaps, 2);
     font-size: $font-sm;
     font-weight: 700;
-    color: $color-secondary;
+    color: var(--bs-red);
     text-transform: uppercase;
   }
 
@@ -17,7 +17,7 @@
 
   &__meta {
     margin-bottom: map-get($gaps, 4);
-    color: $color-grey;
+    color: var(--bs-gray-600);
     font-size: $font-sm;
   }
 

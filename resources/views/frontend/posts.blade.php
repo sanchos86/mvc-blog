@@ -4,6 +4,10 @@
     {{ $title }} | {{ config('app.name') }}
 @endsection
 
+@section('meta')
+    @include('frontend.components.meta')
+@endsection
+
 @section('content')
     <div class="col-12 col-sm-12 col-md-12 col-lg-8 mb-4 mb-lg-0">
         @include('frontend.components.heading', ['level' => 1, 'headingTitle' => $headingTitle, 'class' => 'mb-4', 'bordered' => true])

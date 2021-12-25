@@ -17,6 +17,8 @@ class CreateTagsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->unique();
+            $table->string('meta_title')->nullable();
+            $table->string('meta_description');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
         });

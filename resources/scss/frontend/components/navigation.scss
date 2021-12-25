@@ -19,13 +19,13 @@
         display: flex;
       }
       > #{$nav}__link {
-        background-color: $color-secondary;
+        background-color: var(--bs-red);
       }
     }
     &--active {
       > #{$nav}__link {
-        color: $color-white;
-        background-color: $color-secondary;
+        color: var(--bs-white);
+        background-color: var(--bs-red);
       }
     }
   }
@@ -52,8 +52,8 @@
     display: flex;
     align-items: center;
     padding: map-get($gaps, 3) map-get($gaps, 4);
-    background-color: $color-secondary;
-    color: $color-white;
+    background-color: var(--bs-red);
+    color: var(--bs-white);
     text-transform: uppercase;
     font-weight: bold;
     font-size: $font-md;

@@ -22,6 +22,8 @@ class CreatePostsTable extends Migration
             $table->timestamp('published_at')->nullable();
             $table->string('src');
             $table->text('plain_text');
+            $table->string('meta_title')->nullable();
+            $table->string('meta_description');
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();
 

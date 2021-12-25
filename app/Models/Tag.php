@@ -13,6 +13,8 @@ class Tag extends Model
     protected $fillable = [
         'name',
         'slug',
+        'meta_title',
+        'meta_description',
     ];
 
     public function posts(): BelongsToMany

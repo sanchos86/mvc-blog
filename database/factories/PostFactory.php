@@ -27,7 +27,9 @@ class PostFactory extends Factory
             'slug' => $this->faker->unique()->slug,
             'published_at' => rand(0, 10) > 5 ? date('Y-m-d') : null,
             'src' => '',
-            'plain_text' => $this->faker->realText(200)
+            'plain_text' => $this->faker->realText(200),
+            'meta_title' => $this->faker->sentence(),
+            'meta_description' => $this->faker->text(155),
         ];
     }
 }

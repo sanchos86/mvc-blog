@@ -26,6 +26,7 @@ $socials = [
                 target="_blank"
                 href="{{ $social['url'] }}"
                 title="{{ $social['name'] }}"
+                rel="noopener"
             >
                 <i class="fab fa-lg fa-{{ $social['icon'] }}"></i>
             </a>

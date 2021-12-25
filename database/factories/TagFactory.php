@@ -24,6 +24,8 @@ class TagFactory extends Factory
         return [
             'name' => $this->faker->word,
             'slug' => $this->faker->unique()->slug,
+            'meta_title' => $this->faker->sentence(),
+            'meta_description' => $this->faker->text(155),
         ];
     }
 }

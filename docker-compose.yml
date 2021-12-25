@@ -33,8 +33,10 @@ services:
     volumes:
       - .:/var/www/app
       - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/certs:/etc/nginx/conf.d/certs
     ports:
       - 80:80
+      - 443:443
 
 volumes:
   mysql:

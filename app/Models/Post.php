@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\{Model, Builder};
 use Illuminate\Database\Eloquent\Relations\{BelongsTo, BelongsToMany};
 
 class Post extends Model
@@ -19,7 +19,9 @@ class Post extends Model
         'category_id',
         'published_at',
         'src',
-        'plain_text'
+        'plain_text',
+        'meta_title',
+        'meta_description',
     ];
 
     public function category(): BelongsTo
@@ -39,5 +41,12 @@ class Post extends Model
     {
         $this->published_at = $publish ? date('Y-m-d') : null;
         $this->save();
+    }
+
+    protected static function booted()
+    {
+        static::addGlobalScope('desc', function (Builder $builder) {
+            return $builder->orderBy('id', 'desc');
+        });
     }
 }

@@ -1,6 +1,7 @@
 @import 'frontend/_variables.scss';
 @import '~normalize-scss/sass/_normalize.scss';
 @import '~bootstrap/scss/bootstrap-grid.scss';
+@import '~highlight.js/styles/base16/ocean.css';
 @import 'frontend/common.scss';
 
 @import 'frontend/components/heading.scss';
@@ -15,3 +16,4 @@
 @import 'frontend/components/post.scss';
 @import 'frontend/components/post-content.scss';
 @import 'frontend/components/nothing-found.scss';
+@import 'frontend/components/mobile-navigation.scss';

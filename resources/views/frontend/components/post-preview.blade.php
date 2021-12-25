@@ -2,7 +2,7 @@
     <a class="post-preview__thumb" href="{{ route('post-by-slug', ['post' => $post]) }}">
         <img
             class="post-preview__img"
-            src="{{ $post->src ?: 'https://via.placeholder.com/640x360.png' }}"
+            src="{{ $post->src ? asset('storage/' . $post->src) : config('misc.fallback_image_url') }}"
             alt="{{ $post->title }}"
         >
     </a>

@@ -6,12 +6,12 @@
     display: inline-flex;
     padding: 0.5rem 0.75rem;
     margin: 0.125rem;
-    color: $color-white;
+    color: var(--bs-white);
     background-color: $color-accent;
     border-radius: $border-radius;
 
     &--active {
-      background-color: $color-secondary;
+      background-color: var(--bs-red);
     }
 
     &--disabled {

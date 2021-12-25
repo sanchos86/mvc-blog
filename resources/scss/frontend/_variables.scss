@@ -1,10 +1,7 @@
 @use "sass:math";
 
 $color-accent: #222222;
-$color-secondary: #e74c3c;
 $color-white: #ffffff;
-$color-grey: #888888;
-$color-grey-light: #dddddd;
 
 $font-sm: 0.75rem;
 $font-md: 0.875rem;
@@ -29,13 +26,3 @@ $z-indices: ();
 @for $i from 1 through 6 {
   $z-indices: map_merge($z-indices, ($i: ($i * $z-index-step)));
 }
-
-/// Grid-breakpoints
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
-);
-

@@ -3,7 +3,7 @@
   font-size: 18px;
   &--bordered {
     #{$heading}__title {
-      border-bottom: 2px solid $color-secondary;
+      border-bottom: 2px solid var(--bs-red);
     }
   }
 

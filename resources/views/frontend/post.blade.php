@@ -4,6 +4,10 @@
     {{ $post->title }} | {{ config('app.name') }}
 @endsection
 
+@section('meta')
+    @include('frontend.components.meta')
+@endsection
+
 @section('content')
     <article class="col-12 col-sm-12 col-md-12 col-lg-8 mb-4 mb-lg-0 post">
         <header class="post__header">
@@ -16,7 +20,7 @@
             </div>
         </header>
         <div class="post__thumb">
-            <img class="post__img" src="{{ $post->src ?: 'https://via.placeholder.com/640x360.png' }}" alt="{{ $post->title }}">
+            <img class="post__img" src="{{ $post->src ? asset( 'storage/' . $post->src) : config('misc.fallback_image_url') }}" alt="{{ $post->title }}">
         </div>
         <div class="post__content">
             @include('frontend.components.post-content', ['content' => $post->text])
